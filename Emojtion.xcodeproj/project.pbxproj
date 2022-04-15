@@ -13,6 +13,8 @@
 		551583712808DE7D00387EDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515835F2808DE7C00387EDE /* ContentView.swift */; };
 		551583722808DE7D00387EDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551583602808DE7D00387EDE /* Assets.xcassets */; };
 		551583732808DE7D00387EDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551583602808DE7D00387EDE /* Assets.xcassets */; };
+		5515837F2808E09E00387EDE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515837D2808DF9700387EDE /* MenuView.swift */; };
+		551583802808E0AC00387EDE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515837D2808DF9700387EDE /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		551583652808DE7D00387EDE /* Emojtion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emojtion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5515836B2808DE7D00387EDE /* Emojtion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emojtion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5515836D2808DE7D00387EDE /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		5515837D2808DF9700387EDE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		551583812808FE2C00387EDE /* Emojtion--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Emojtion--iOS--Info.plist"; sourceTree = "<group>"; };
+		551583822808FF8400387EDE /* Emojtion--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Emojtion--macOS--Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +50,8 @@
 		551583582808DE7C00387EDE = {
 			isa = PBXGroup;
 			children = (
+				551583822808FF8400387EDE /* Emojtion--macOS--Info.plist */,
+				551583812808FE2C00387EDE /* Emojtion--iOS--Info.plist */,
 				5515835D2808DE7C00387EDE /* Shared */,
 				5515836C2808DE7D00387EDE /* macOS */,
 				551583662808DE7D00387EDE /* Products */,
@@ -54,6 +61,7 @@
 		5515835D2808DE7C00387EDE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5515837C2808DF8D00387EDE /* Menu */,
 				5515835E2808DE7C00387EDE /* EmojtionApp.swift */,
 				5515835F2808DE7C00387EDE /* ContentView.swift */,
 				551583602808DE7D00387EDE /* Assets.xcassets */,
@@ -76,6 +84,14 @@
 				5515836D2808DE7D00387EDE /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		5515837C2808DF8D00387EDE /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				5515837D2808DF9700387EDE /* MenuView.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				551583702808DE7D00387EDE /* ContentView.swift in Sources */,
+				551583802808E0AC00387EDE /* MenuView.swift in Sources */,
 				5515836E2808DE7D00387EDE /* EmojtionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				551583712808DE7D00387EDE /* ContentView.swift in Sources */,
+				5515837F2808E09E00387EDE /* MenuView.swift in Sources */,
 				5515836F2808DE7D00387EDE /* EmojtionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +329,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Emojtion--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -340,6 +359,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Emojtion--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -372,6 +392,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Emojtion--macOS--Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -398,6 +420,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Emojtion--macOS--Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

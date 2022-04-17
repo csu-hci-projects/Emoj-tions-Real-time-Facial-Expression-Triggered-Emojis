@@ -15,6 +15,9 @@
 		551583732808DE7D00387EDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551583602808DE7D00387EDE /* Assets.xcassets */; };
 		5515837F2808E09E00387EDE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515837D2808DF9700387EDE /* MenuView.swift */; };
 		551583802808E0AC00387EDE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515837D2808DF9700387EDE /* MenuView.swift */; };
+		5597DB6B280B678900CEBFC0 /* LoadingButton in Frameworks */ = {isa = PBXBuildFile; productRef = 5597DB6A280B678900CEBFC0 /* LoadingButton */; };
+		5597DB6E280B68C800CEBFC0 /* LoadingButton in Frameworks */ = {isa = PBXBuildFile; productRef = 5597DB6D280B68C800CEBFC0 /* LoadingButton */; };
+		55B08BCD280B88C000F034B0 /* EmojtionProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B08BCB280B88C000F034B0 /* EmojtionProcessing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,7 @@
 		5515837D2808DF9700387EDE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		551583812808FE2C00387EDE /* Emojtion--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Emojtion--iOS--Info.plist"; sourceTree = "<group>"; };
 		551583822808FF8400387EDE /* Emojtion--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Emojtion--macOS--Info.plist"; sourceTree = "<group>"; };
+		55B08BCB280B88C000F034B0 /* EmojtionProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojtionProcessing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5597DB6B280B678900CEBFC0 /* LoadingButton in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5597DB6E280B68C800CEBFC0 /* LoadingButton in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,11 +56,13 @@
 		551583582808DE7C00387EDE = {
 			isa = PBXGroup;
 			children = (
+				5597DB6F280B738D00CEBFC0 /* Model */,
 				551583822808FF8400387EDE /* Emojtion--macOS--Info.plist */,
 				551583812808FE2C00387EDE /* Emojtion--iOS--Info.plist */,
 				5515835D2808DE7C00387EDE /* Shared */,
 				5515836C2808DE7D00387EDE /* macOS */,
 				551583662808DE7D00387EDE /* Products */,
+				5597DB6C280B68C800CEBFC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +72,7 @@
 				5515837C2808DF8D00387EDE /* Menu */,
 				5515835E2808DE7C00387EDE /* EmojtionApp.swift */,
 				5515835F2808DE7C00387EDE /* ContentView.swift */,
+				55B08BCB280B88C000F034B0 /* EmojtionProcessing.swift */,
 				551583602808DE7D00387EDE /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -94,6 +103,20 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		5597DB6C280B68C800CEBFC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5597DB6F280B738D00CEBFC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +133,9 @@
 			dependencies = (
 			);
 			name = "Emojtion (iOS)";
+			packageProductDependencies = (
+				5597DB6A280B678900CEBFC0 /* LoadingButton */,
+			);
 			productName = "Emojtion (iOS)";
 			productReference = 551583652808DE7D00387EDE /* Emojtion.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +153,9 @@
 			dependencies = (
 			);
 			name = "Emojtion (macOS)";
+			packageProductDependencies = (
+				5597DB6D280B68C800CEBFC0 /* LoadingButton */,
+			);
 			productName = "Emojtion (macOS)";
 			productReference = 5515836B2808DE7D00387EDE /* Emojtion.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +187,9 @@
 				Base,
 			);
 			mainGroup = 551583582808DE7C00387EDE;
+			packageReferences = (
+				5597DB69280B678900CEBFC0 /* XCRemoteSwiftPackageReference "LoadingButton" */,
+			);
 			productRefGroup = 551583662808DE7D00387EDE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				551583712808DE7D00387EDE /* ContentView.swift in Sources */,
+				55B08BCD280B88C000F034B0 /* EmojtionProcessing.swift in Sources */,
 				5515837F2808E09E00387EDE /* MenuView.swift in Sources */,
 				5515836F2808DE7D00387EDE /* EmojtionApp.swift in Sources */,
 			);
@@ -393,7 +426,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Emojtion--macOS--Info.plist";
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Emojtion camera use";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -421,7 +454,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Emojtion--macOS--Info.plist";
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Emojtion camera use";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -468,6 +501,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5597DB69280B678900CEBFC0 /* XCRemoteSwiftPackageReference "LoadingButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Changemin/LoadingButton";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5597DB6A280B678900CEBFC0 /* LoadingButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5597DB69280B678900CEBFC0 /* XCRemoteSwiftPackageReference "LoadingButton" */;
+			productName = LoadingButton;
+		};
+		5597DB6D280B68C800CEBFC0 /* LoadingButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5597DB69280B678900CEBFC0 /* XCRemoteSwiftPackageReference "LoadingButton" */;
+			productName = LoadingButton;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 551583592808DE7C00387EDE /* Project object */;
 }

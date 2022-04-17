@@ -2,7 +2,7 @@
 //  EmojtionApp.swift
 //  Shared
 //
-//  Created by Jake Mismas on 4/14/22.
+//  Created by Jake Mismas on 4/01/22.
 //
 
 import SwiftUI
@@ -40,15 +40,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popOver.contentViewController = NSViewController()
         popOver.contentViewController?.view = NSHostingView(rootView: menuView)
         
-        // Make View Main View...
-        
-        
         // Create status bar button
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         // Safe check if status button is available or not...
         if let MenuButton = statusItem?.button{
             
-            MenuButton.image = NSImage(named: NSImage.Name("RobotEmojiSmall"))
+            MenuButton.image = NSImage(named: NSImage.Name("LogoWhiteSmall"))
             
             MenuButton.action = #selector(MenuButtonToggle)
             }
@@ -66,3 +63,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 }
+

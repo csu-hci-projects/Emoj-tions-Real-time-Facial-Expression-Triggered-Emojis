@@ -6,50 +6,58 @@
 //
 
 import SwiftUI
+import LoadingButton
 
 struct MenuView: View {
     @State var EmojtionOn = false
+    @State var isLoading: Bool = false
+    
+    @StateObject private var model = MyModel()
     
     var body: some View {
         VStack{
-            
-            // Title and Settings Button
             HStack{
+                
                 Text("Emojtion")
-                    .font(.headline)
+                    .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.primary)
-                    
-                Spacer(minLength: 0)
                 
-                Button(action: {}, label: {
-                    Image(systemName: "gearshape.fill")
-                        .foregroundColor(Color.gray)
-                })
-                .buttonStyle(PlainButtonStyle())
+                Text("v0.5")
+                    .italic()
+                    .foregroundColor(.primary)
+                
             }
-            .padding(.top)
             .padding(.horizontal)
             
             Divider()
-                .padding(.top, 4)
             
-            Image("RobotEmoji")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding(0)
-            
-            Toggle(isOn: $EmojtionOn, label: {
-                Text("Activate Emojtion")
-            })
-                .toggleStyle(SwitchToggleStyle(tint: .green))
-                .padding(.horizontal)
-                .help(Text("Toggle Emojtion On/Off"))
-                .padding(.bottom)
+            VStack (spacing: 0){
+                Text(model.emoji)
+                    .font(Font.system(size: 128))
+                    .padding(.top,-9)
                 
-            Spacer(minLength: 0)
+                Button(action: {
+                    print("Face Scan Triggered")
+                    
+                }, label: {
+                    HStack{
+                        Image(systemName: "faceid").foregroundColor(.white)
+                            .foregroundColor(Color.gray)
+                            .font(Font.system(size: 15))
+                        Text("Scan Face")
+                            .foregroundColor(.white)
+                    }
+                })
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
+                
+                Text("...or press ⌥ ⌘ F")
+                    .italic()
+                    .foregroundColor(.gray)
+            }
         }
-        .frame(width: 200, height: 250)
+        .frame(width: 150,height: 250)
     }
 }
 

@@ -9,8 +9,4 @@ When ran, notice that...
 * The user facing menu-bar application appears, allowing them to capture their facial expression.
 * A proctor facing text input appears, allowing the proctor to feed what facial expression exists on the users face into a series of switch statements, which assigns it to an emoji.
 
-What still needs to be complete is...
-1. The facial expression turned emoji should be applied to the users clipboard for easy pasting. 
-2. The emoji most recently assigned to their emotion should replace the robot emoji in the menu bar application (tentative, this is low priority for the prototype)
-
-Overall, the current product will allow A/B testing using Wizard of Oz. 
+Overall, the current prototype allows usability & A/B testing via Wizard of Oz. 
